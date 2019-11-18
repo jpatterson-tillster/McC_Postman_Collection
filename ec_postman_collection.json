@@ -1,0 +1,3062 @@
+{
+	"info": {
+		"_postman_id": "c317d4b7-6182-4d58-baf0-87256ab80818",
+		"name": "Call Center",
+		"description": "Call Center API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login Agent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    userName: \"kudzuqa\",\n    password: \"password\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"login"
+					]
+				},
+				"description": "Login Call Center Agent"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Restaurant By DNIS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/restaurants/4326870880",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"restaurants",
+						"4326870880"
+					]
+				},
+				"description": "GET Restaurant By DNIS"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customers By Ani",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/customers/7703330000",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"customers",
+						"7703330000"
+					]
+				},
+				"description": "GET Customers By Ani"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Customer\": \n    {\n      \"FirstName\": \"Lewis2\",\n      \"LastName\": \"Booker\",\n      \"Phone\": \"205-123-4567\",\n      \"Email\": \"lbooker@tillster.com\",\n      \"Notes\": null\n    }\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/customers",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"customers"
+					]
+				},
+				"description": "New Customer"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Customer\":\n    {\n      \"FirstName\": \"Aayush1\",\n      \"LastName\": \"Goel\",\n      \"Phone\": \"678-739-4722\",\n      \"Email\": \"agoel@tillster.com\",\n      \"Notes\": \"Note 1\"\n    }\n  \n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/customers/3720633",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"customers",
+						"3720633"
+					]
+				},
+				"description": "Modify Customer"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Customer",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/customers/4999341",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"customers",
+						"4999341"
+					]
+				},
+				"description": "Delete Customer"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer Address",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Address\":\n\n        {\n          \"Address1\": \"aasdfa\",\n          \"Address2\": \"\",\n          \"Address3\": \"Mod1\",\n          \"PostalCode\": \"233\",\n          \"State\": {\n            \"Id\": 14,\n            \"StateCode\": \"GA\",\n            \"StateName\": \"Georgia\"\n          },\n          \"Country\": {\n            \"Id\": 223,\n            \"CountryCode\": \"US\",\n            \"CountryName\": \"United States\"\n          },\n          \"CustomerId\": 3720633,\n          \"City\": \"Alpharetta\",\n          \"Phone1\": \"234-555-9999\",\n          \"Phone2\": null,\n          \"AddressType\": {\n            \"Id\": 4,\n            \"Name\": \"Office Building\"\n          },\n          \"Name\": \"Aayush Goel\",\n          \"Instructions\": null\n        }\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/customers/3720633/addresses/53862",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"customers",
+						"3720633",
+						"addresses",
+						"53862"
+					]
+				},
+				"description": "Modify Customer Address"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Customer Address",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/customers/3720633/addresses/53859",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"customers",
+						"3720633",
+						"addresses",
+						"53859"
+					]
+				},
+				"description": "Delete Customer Address"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Customer Address",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Address\":\n\n        {\n          \"Address1\": \"Address1\",\n          \"Address2\": \"\",\n          \"Address3\": \"Mod1\",\n          \"PostalCode\": \"30009\",\n          \"State\": {\n            \"Id\": 14,\n            \"StateCode\": \"GA\",\n            \"StateName\": \"Georgia\"\n          },\n          \"Country\": {\n            \"Id\": 223,\n            \"CountryCode\": \"US\",\n            \"CountryName\": \"United States\"\n          },\n          \"CustomerId\": 3720633,\n          \"City\": \"Alpharetta\",\n          \"Phone1\": \"205-999-9999\",\n          \"Phone2\": null,\n          \"AddressType\": {\n            \"Id\": 4,\n            \"Name\": \"Office Building\"\n          },\n          \"Name\": \"Aayush Goel\",\n          \"Instructions\": null\n        }\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/customers/3720633/addresses",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"customers",
+						"3720633",
+						"addresses"
+					]
+				},
+				"description": "New Customer Address"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/callcenters/5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"callcenters",
+						"5"
+					]
+				},
+				"description": "GET Call Center by id"
+			},
+			"response": []
+		},
+		{
+			"name": "Create CallCenter",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"CallCenter\": {\n    \"Name\": \"TestCallCenter\",\n    \"MaxAccounts\": 10000\n  }\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/callcenters",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"callcenters"
+					]
+				},
+				"description": "New Call Center"
+			},
+			"response": []
+		},
+		{
+			"name": "Update CallCenter",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"CallCenter\": {\n    \"Name\": \"TestCallCenter\",\n    \"MaxAccounts\": 10000,\n    \"CreateDateTime\": \"2009-01-14T16:43:53.347\",\n  }\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/callcenters/22",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"callcenters",
+						"22"
+					]
+				},
+				"description": "Update Call Center"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete CallCenter",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/callcenters/21",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"callcenters",
+						"21"
+					]
+				},
+				"description": "Delete CallCenter"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/accounts/2000",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"accounts",
+						"2000"
+					]
+				},
+				"description": "GET Call Center User by id"
+			},
+			"response": []
+		},
+		{
+			"name": "Update CallCenter User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Account\": {\n    \"AccountId\": 2200,\n    \"Login\": \"lbooker\",\n    \"Role\": {\n      \"Id\": 2,\n      \"Name\": \"SuperAdmin\"\n    },\n    \"CallCenterId\": null,\n    \"FirstName\": \"First1\",\n    \"LastName\": \"Last1\",\n    \"Email\": \"lbooker@tillster.com\"\n  }\n}\n"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/accounts/2046",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"accounts",
+						"2046"
+					]
+				},
+				"description": "Update Call Center User"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete CallCenter User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/accounts/2054",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"accounts",
+						"2054"
+					]
+				},
+				"description": "Delete Call Center User"
+			},
+			"response": []
+		},
+		{
+			"name": "Create CallCenter User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"ChangePasswordFormUrl\": \"https:\\/\\/callcenter.kiofc.com\\/changepassword\",\n  \"CallCenterAccount\": {\n    \"Login\": \"TestLogin114\",\n    \"Role\": {\n      \"Id\": 2,\n      \"Name\": \"SuperAdmin\"\n    },\n    \"CallCenterId\": 15,\n    \"FirstName\": \"First1\",\n    \"LastName\": \"Last1\",\n    \"Email\": \"l_booker@hotmail.com\"\n  }\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/accounts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"accounts"
+					]
+				},
+				"description": "New Call Center User"
+			},
+			"response": []
+		},
+		{
+			"name": "Get US States",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/lists/states/US",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"lists",
+						"states",
+						"US"
+					]
+				},
+				"description": "GET Call Center States"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Countries",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/lists/countries",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"lists",
+						"countries"
+					]
+				},
+				"description": "GET Call Center Countries"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter Script",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/scripts/1700",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"scripts",
+						"1700"
+					]
+				},
+				"description": "GET Call Center Script by id"
+			},
+			"response": []
+		},
+		{
+			"name": "Create CallCenter Script",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Script\": {\n    \"Name\": \"CPK 289 Perkins Rowe\",\n    \"CallCenterId\": 5,\n    \"Script\": \"Hello there. What would you like to order?\"\n  }\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/scripts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"scripts"
+					]
+				},
+				"description": "New Call Center Script"
+			},
+			"response": []
+		},
+		{
+			"name": "Update CallCenter Script",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Script\": {\n    \"Name\": \"CPK 289 Hello There\",\n    \"CallCenterId\": 5,\n    \"Script\": \"Hello There.\"\n  }\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/scripts/1726",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"scripts",
+						"1726"
+					]
+				},
+				"description": "Update Call Center Script"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete CallCenter Script",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/scripts/1726",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"scripts",
+						"1726"
+					]
+				},
+				"description": "Delete Call Center Script"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter Category",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/categories/41",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"categories",
+						"41"
+					]
+				},
+				"description": "GET Call Center Category by id"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter Categories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/categories",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"categories"
+					]
+				},
+				"description": "GET Call Center Categories"
+			},
+			"response": []
+		},
+		{
+			"name": "Update CallCenter Category",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Category\": {\n    \"CategoryName\": \"Orders\",\n  }\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/categories/41",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"categories",
+						"41"
+					]
+				},
+				"description": "Update Call Center Category"
+			},
+			"response": []
+		},
+		{
+			"name": "Create CallCenter Category",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Category\": {\n    \"CategoryName\": \"Orders - Temp3a\",\n  }\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/categories",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"categories"
+					]
+				},
+				"description": "New Call Center Category"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete CallCenter Category",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/categories/151",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"categories",
+						"151"
+					]
+				},
+				"description": "Delete Call Center Category"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter Reason",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/categories/41/reasons/18",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"categories",
+						"41",
+						"reasons",
+						"18"
+					]
+				},
+				"description": "GET Call Center Reason"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter Reasons",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/categories/41/reasons",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"categories",
+						"41",
+						"reasons"
+					]
+				},
+				"description": "GET Call Center Reasons by Category"
+			},
+			"response": []
+		},
+		{
+			"name": "Update CallCenter Reason",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Reason\": {\n    \"Reason\": \"Order abc\",\n    \"Description\": \"Regular Order\"\n  }\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/categories/153/reasons/18",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"categories",
+						"153",
+						"reasons",
+						"18"
+					]
+				},
+				"description": "Update Call Center Reason"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete CallCenter Reason",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/categories/41/reasons/160",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"categories",
+						"41",
+						"reasons",
+						"160"
+					]
+				},
+				"description": "Delete Call Center Reason"
+			},
+			"response": []
+		},
+		{
+			"name": "Create CallCenter Reason",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Reason\": {\n    \"Reason\": \"Order a b\",\n    \"Description\": \"Regular Order 1\"\n  },\n  \"NewCategoryText\": \"Orders 11111\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/categories/41/reasons",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"categories",
+						"41",
+						"reasons"
+					]
+				},
+				"description": "New Call Center Reason"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter Concepts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/concepts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"concepts"
+					]
+				},
+				"description": "GET Call Center Concepts"
+			},
+			"response": []
+		},
+		{
+			"name": "Add CallCenter Concept",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/concepts/61",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"concepts",
+						"61"
+					]
+				},
+				"description": "Adds Call Center Concept to Call Center"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter Concept",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/concepts/22",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"concepts",
+						"22"
+					]
+				},
+				"description": "GET Call Center Concept"
+			},
+			"response": []
+		},
+		{
+			"name": "Remove CallCenter Concept",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/5/concepts/61",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"5",
+						"concepts",
+						"61"
+					]
+				},
+				"description": "Removes Call Center Concept from Call Center"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter Scripts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/15/scripts?page=10&size=20&sortby=Name&descending=no",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"15",
+						"scripts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "10"
+						},
+						{
+							"key": "size",
+							"value": "20"
+						},
+						{
+							"key": "sortby",
+							"value": "Name"
+						},
+						{
+							"key": "descending",
+							"value": "no"
+						}
+					]
+				},
+				"description": "GET Call Center Scripts"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/accounts?page=2&size=10&sortby=LastName",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"accounts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sortby",
+							"value": "LastName"
+						}
+					]
+				},
+				"description": "GET Call Center Users"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter Dnises",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/dnisentries?page=1&size=20&sortby=DNIS",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"dnisentries"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "20"
+						},
+						{
+							"key": "sortby",
+							"value": "DNIS"
+						}
+					]
+				},
+				"description": "GET Call Center Dnises"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter Dispositions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/15/dispositions?page=1&size=20&sortby=Reason&descending=no&keyword=catering",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"15",
+						"dispositions"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "20"
+						},
+						{
+							"key": "sortby",
+							"value": "Reason"
+						},
+						{
+							"key": "descending",
+							"value": "no"
+						},
+						{
+							"key": "keyword",
+							"value": "catering"
+						}
+					]
+				},
+				"description": "GET Call Center Dispositions"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter Calls",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/calls?page=3&size=20&sortby=StartTime|desc&fromdate=07-01-2017&todate=09-20-2017",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"calls"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "3"
+						},
+						{
+							"key": "size",
+							"value": "20"
+						},
+						{
+							"key": "sortby",
+							"value": "StartTime|desc"
+						},
+						{
+							"key": "fromdate",
+							"value": "07-01-2017"
+						},
+						{
+							"key": "todate",
+							"value": "09-20-2017"
+						}
+					]
+				},
+				"description": "GET Call Center Calls"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter Restaurants",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/restaurants?page=1&size=20&sortby=Concept|desc",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"restaurants"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "20"
+						},
+						{
+							"key": "sortby",
+							"value": "Concept|desc"
+						}
+					]
+				},
+				"description": "GET Call Center Restaurants"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter Orders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla"
+					},
+					{
+						"key": "callCenterAgent",
+						"value": "CallCenterUI"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/orders?callcenterid=5&fromdate=09-01-2017&todate=03-25-2018&page=2&size=20&sortby=OrderId",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "callcenterid",
+							"value": "5"
+						},
+						{
+							"key": "fromdate",
+							"value": "09-01-2017"
+						},
+						{
+							"key": "todate",
+							"value": "03-25-2018"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "size",
+							"value": "20"
+						},
+						{
+							"key": "sortby",
+							"value": "OrderId"
+						}
+					]
+				},
+				"description": "GET Call Center Orders"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter CallCenters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/callcenters?page=1&size=10&sortby=Name&keyword=Test",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"callcenters"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sortby",
+							"value": "Name"
+						},
+						{
+							"key": "keyword",
+							"value": "Test"
+						}
+					]
+				},
+				"description": "GET Call Centers"
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Login\": \"gparmar\",\n  \"ChangePasswordFormUrl\": \"https:\\/\\/callcenter.kiofc.com\\/changepassword\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/accounts/resetpassword",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"accounts",
+						"resetpassword"
+					]
+				},
+				"description": "Reset CallCenter User's Password"
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"CurrentPassword\": \"tillster1\",\n  \"NewPassword\": \"tillster\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/accounts/changepassword",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"accounts",
+						"changepassword"
+					]
+				},
+				"description": "Change CallCenter User's Password"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Token\": \"313fc6bc3245480d8c4dc3a2943d98d3\",\n  \"Password\": \"tillster2\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/accounts/updatepassword",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"accounts",
+						"updatepassword"
+					]
+				},
+				"description": "Update CallCenter User's Password"
+			},
+			"response": []
+		},
+		{
+			"name": "Start Call",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Dnis\": \"51545\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/15/calls/startcall",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"15",
+						"calls",
+						"startcall"
+					]
+				},
+				"description": "Start a call"
+			},
+			"response": []
+		},
+		{
+			"name": "Associate Customer to Call",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"CustomerId\": 6569\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/calls/2/associatecustomer",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"calls",
+						"2",
+						"associatecustomer"
+					]
+				},
+				"description": "Associates a customer to a call"
+			},
+			"response": []
+		},
+		{
+			"name": "Start Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "customerAuthToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"CallId\": 278\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/calls/startorder",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"calls",
+						"startorder"
+					]
+				},
+				"description": "Start a new order"
+			},
+			"response": []
+		},
+		{
+			"name": "Start Order S2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"CallId\": 2\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/calls/startorder",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"calls",
+						"startorder"
+					]
+				},
+				"description": "Start a new order"
+			},
+			"response": []
+		},
+		{
+			"name": "End Call",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"DispositionReasonId\": 18,\n  \"Comment\": \"Extra syrup on the potatoes please. \"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/calls/7/endcall",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"calls",
+						"7",
+						"endcall"
+					]
+				},
+				"description": "End a call"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Customer Loyalty",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"CustomerId\": 3914607,\n  \"ConceptId\": 82,\n  \"LoyaltyNumber\": \"12345678\",\n  \"LoyaltyUsername\": \"aayush\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/customers/loyalty",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"customers",
+						"loyalty"
+					]
+				},
+				"description": "Associates a concept loyalty to a customer"
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Customer Loyalty",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/customers/loyalty/140",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"customers",
+						"loyalty",
+						"140"
+					]
+				},
+				"description": "Disassociates a concept loyalty from a customer"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer Order History",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/Api.svc/account/{{authToken}}/orderhistory/5?conceptid=82",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Api.svc",
+						"account",
+						"{{authToken}}",
+						"orderhistory",
+						"5"
+					],
+					"query": [
+						{
+							"key": "conceptid",
+							"value": "82"
+						}
+					]
+				},
+				"description": "Gets order history of a customer."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Messages",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/lists/states/US",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"lists",
+						"states",
+						"US"
+					]
+				},
+				"description": "GET Call Center Messages"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/customers?keyword=singer&page=12&size=5&sortby=FirstName",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"customers"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "singer"
+						},
+						{
+							"key": "page",
+							"value": "12"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						},
+						{
+							"key": "sortby",
+							"value": "FirstName"
+						}
+					]
+				},
+				"description": "GET Customers"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer By Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/customers/detail/3720637",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"customers",
+						"detail",
+						"3720637"
+					]
+				},
+				"description": "GET Customer By Id"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer Cars",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/customers/2843584/cars",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"customers",
+						"2843584",
+						"cars"
+					]
+				},
+				"description": "GET Cars by Customer"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Customer Car",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Car\": {\n      \"CustomerId\": 2843584,\n      \"CarColor\": \"Black\",\n      \"CarModel\": \"Huffy\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/customers/2843584/cars",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"customers",
+						"2843584",
+						"cars"
+					]
+				},
+				"description": "Creates a car for a customer"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Customer Car",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/customers/2843584/cars/1286985",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"customers",
+						"2843584",
+						"cars",
+						"1286985"
+					]
+				},
+				"description": "Deletes a customer car"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Customer Car",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Car\": {\n      \"CarColor\": \"Red\",\n      \"CarModel\": \"10 speed\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/customers/2843584/cars/1286982",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"customers",
+						"2843584",
+						"cars",
+						"1286982"
+					]
+				},
+				"description": "Updates a car for a customer"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer Credit Cards",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/customers/3958157/creditcards",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"customers",
+						"3958157",
+						"creditcards"
+					]
+				},
+				"description": "Gets all the saved credit cards belonging to one single unique individual customer."
+			},
+			"response": []
+		},
+		{
+			"name": "Add Customer Credit Card",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    { \"CreditCard\": {\n      \"nickname\": \"VISA\",\n      \"name\": \"Tina Schneider\",\n      \"ccType\": \"VISA\",\n      \"ccNumber\": \"4111111111111111\",\n      \"expirationDate\": \"2017-10-01T00:00:00\",\n      \"billingAddress1\": null,\n      \"billingAddress2\": null,\n      \"billingCity\": null,\n      \"billingState\": null,\n      \"billingPostalCode\": \"20002\",\n      \"token\": \"{{authToken}}\",\n      \"isDefault\": false,\n      \"sortOrder\": 1\n      }\n    } "
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/customers/3958157/creditcards",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"customers",
+						"3958157",
+						"creditcards"
+					]
+				},
+				"description": "Adds a credit card for a customer."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Customer Credit Card",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    { \"CreditCard\": {\n      \"nickname\": \"VISA\",\n      \"name\": \"Tina Schneider\",\n      \"ccType\": \"VISA\",\n      \"ccNumber\": \"4111111111111111\",\n      \"expirationDate\": \"2017-10-01T00:00:00\",\n      \"billingAddress1\": null,\n      \"billingAddress2\": null,\n      \"billingCity\": null,\n      \"billingState\": null,\n      \"billingPostalCode\": \"20002\",\n      \"token\": \"{{authToken}}\",\n      \"isDefault\": false,\n      \"sortOrder\": 1\n      }\n    } "
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/customers/3958157/creditcards/{{authToken}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"customers",
+						"3958157",
+						"creditcards",
+						"{{authToken}}"
+					]
+				},
+				"description": "Deletes a credit card."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order History",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/Api.svc/account/{{authToken}}/orderhistory/5?conceptid=82",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Api.svc",
+						"account",
+						"{{authToken}}",
+						"orderhistory",
+						"5"
+					],
+					"query": [
+						{
+							"key": "conceptid",
+							"value": "82"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Repeat Order from Order History",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/Api.svc/account/{{authToken}}/orderhistory/5?conceptid=82",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Api.svc",
+						"account",
+						"{{authToken}}",
+						"orderhistory",
+						"5"
+					],
+					"query": [
+						{
+							"key": "conceptid",
+							"value": "82"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Copy order to store",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"CustomerId\": 3208043\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/calls/6/associatecustomer",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"calls",
+						"6",
+						"associatecustomer"
+					]
+				},
+				"description": "Copies an order to another store"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Delivery Mode Configuration",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/Api.svc/restaurant/4007/order/54366953/deliveryconfiguration/0",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Api.svc",
+						"restaurant",
+						"4007",
+						"order",
+						"54366953",
+						"deliveryconfiguration",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Checkout Configuration",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "prepaidAuthToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/Api.svc/restaurant/4007/order/54366953/checkoutconfig",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Api.svc",
+						"restaurant",
+						"4007",
+						"order",
+						"54366953",
+						"checkoutconfig"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "prepaidAuthToken",
+						"value": "{{authToken}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"paymentTypeId\":272708,\"firstName\":\"john\",\"lastName\":\"smith\",\"phone\":\"3333333333\",\"email\":\"john@mail.com\",\"tipAmount\":0,\"verifyLocationIsOnline\":true}\r\n\r\n "
+				},
+				"url": {
+					"raw": "{{url}}/Api.svc/restaurant/4007/order/54366953",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Api.svc",
+						"restaurant",
+						"4007",
+						"order",
+						"54366953"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Concepts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/lists/concepts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"lists",
+						"concepts"
+					]
+				},
+				"description": "GET Call Center Countries"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Restaurant Admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"DNIS\": \"0303ab\",\n    \"Script\": \"Hello, this is script for 0303cbbbb, version 2.\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/19/restaurant/10744/dnis",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"19",
+						"restaurant",
+						"10744",
+						"dnis"
+					]
+				},
+				"description": "Update Restaurant Admin"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter Categories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/lists/categories?callcenterid=5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"lists",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "callcenterid",
+							"value": "5"
+						}
+					]
+				},
+				"description": "GET Call Center Categories"
+			},
+			"response": []
+		},
+		{
+			"name": "Get CallCenter Dnis",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/19/dnis/0303",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"19",
+						"dnis",
+						"0303"
+					]
+				},
+				"description": "GET Call Center Dnis"
+			},
+			"response": []
+		},
+		{
+			"name": "Save CallCenter Dnis",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"RestaurantId\": 4007,\n    \"Script\": \"Hello, this is your script.\"\n}"
+				},
+				"url": {
+					"raw": "https://services.kiofc.com/api/51/api/callcenter/15/dnis/51545",
+					"protocol": "https",
+					"host": [
+						"services",
+						"kiofc",
+						"com"
+					],
+					"path": [
+						"api",
+						"51",
+						"api",
+						"callcenter",
+						"15",
+						"dnis",
+						"51545"
+					]
+				},
+				"description": "Saves Call Center Dnis"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Dnis's By RestaurantId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/callcenter/dnis?restaurantId=4006",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"dnis"
+					],
+					"query": [
+						{
+							"key": "restaurantId",
+							"value": "4006"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update LatLong",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authToken",
+						"value": "{{authToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"CustomerId\": 4250886,\n   \"AddressId\": 56925,\n   \"Latitude\": 34.0125487,\n   \"Longitude\": -84.4123365\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/callcenter/addresses/latlng",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"callcenter",
+						"addresses",
+						"latlng"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GeoCode",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    'Address1': '3025 Windward Plaza',\n    'Address2': 'Suite 320',\n    'City': 'Alpharetta',\n    'State': 'GA'\n}"
+				},
+				"url": {
+					"raw": "{{url}}/geocode",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"geocode"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
